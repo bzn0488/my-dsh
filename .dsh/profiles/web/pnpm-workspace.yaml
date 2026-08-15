@@ -18,3 +18,7 @@ storeDir: E:/Deepseek Harness/.pnpm-store
 # Keep pnpm's generated cache/state inside the workstation path as well.
 cacheDir: E:/Deepseek Harness/.pnpm-cache
 stateDir: E:/Deepseek Harness/.pnpm-state
+allowBuilds:
+  cloudflared: true
+  cpu-features: true
+  ssh2: true
