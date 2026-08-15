@@ -26,6 +26,7 @@
 - **忽略**：所有 `node_modules/`、pnpm store/cache、日志（`*.log`）、密钥（`.dsh/.credentials.yaml`）。
 - **敏感信息**：会话与技能可能包含对话内容与工具输出，仓库必须保持私有（不要推送到公开 remote）。
 - **会话归档阈值**：会话日志持续增长（每个约 1–2 MB）。当 `.dsh/sessions/` 总量超过 **100 MB** 时，将最老的会话移出仓库并（可选）用 `git filter-repo` 重写历史，控制 clone 体积。
+- **会话是活文件**：进行中的会话日志会持续被写入，`git status` 经常显示会话文件有改动——这是预期行为，像"存档"一样在会话结束后提交即可。
 - **插件更新**：`vendor/plugins/` 内的插件上游发布新版本后，把新版本拷入 vendor 并提交（或改回 registry 引用）；distill 更新后若补丁不再匹配，用 `git diff --no-index` 重新生成 `patches/distill-whitelist.patch`。
 
 ## 环境变量（用户级 + 启动脚本双保险）
