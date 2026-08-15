@@ -1,5 +1,17 @@
 packages:
   - .
+  # Vendored plugin sources (dshmarket + @linxin666 web-ui family) live in the
+  # repo under vendor/plugins; pnpm links these local copies in preference to
+  # registry versions whose version ranges they satisfy.
+  - ../../../vendor/plugins/dshmarket
+  - ../../../vendor/plugins/@linxin666/*
+
+# Local patch applied on install: registers the distill review-request event
+# type with the harness session vocabulary so persisted sessions containing it
+# stay loadable. Regenerate with `git diff --no-index` against the pristine
+# tarball if the plugin changes. See patches/distill-whitelist.patch.
+patchedDependencies:
+  '@loserfox/distill@0.1.0': ../../../patches/distill-whitelist.patch
 
 nodeLinker: hoisted
 autoInstallPeers: false

@@ -4,6 +4,9 @@ settings:
   autoInstallPeers: false
   excludeLinksFromLockfile: false
 
+patchedDependencies:
+  '@loserfox/distill@0.1.0': 438436963ef7851aadc3c3bdc556939223005877812241e9763608c2b6dbe587
+
 importers:
 
   .:
@@ -13,10 +16,117 @@ importers:
         version: 0.1.11
       '@loserfox/distill':
         specifier: github:LoserFox/distill
-        version: https://codeload.github.com/LoserFox/distill/tar.gz/d2aaa395adeffe88e429be796c12d829752cbad1
+        version: https://codeload.github.com/LoserFox/distill/tar.gz/d2aaa395adeffe88e429be796c12d829752cbad1(patch_hash=438436963ef7851aadc3c3bdc556939223005877812241e9763608c2b6dbe587)
       dshmarket:
         specifier: ^1.2.4
         version: 1.2.4
+
+  ../../../vendor/plugins/@linxin666/dsh-client-ui-aionui-panel: {}
+
+  ../../../vendor/plugins/@linxin666/dsh-client-ui-git-graph: {}
+
+  ../../../vendor/plugins/@linxin666/dsh-client-ui-skin-center:
+    dependencies:
+      schemastery:
+        specifier: ^3.18.0
+        version: 3.18.0
+
+  ../../../vendor/plugins/@linxin666/dsh-client-ui-task-board:
+    dependencies:
+      schemastery:
+        specifier: ^3.18.0
+        version: 3.18.0
+
+  ../../../vendor/plugins/@linxin666/dsh-client-ui-web-ui-settings: {}
+
+  ../../../vendor/plugins/@linxin666/dsh-live-stats:
+    dependencies:
+      schemastery:
+        specifier: ^3.18.0
+        version: 3.18.0
+      zod:
+        specifier: ^4.4.3
+        version: 4.4.3
+
+  ../../../vendor/plugins/@linxin666/dsh-pet:
+    dependencies:
+      clsx:
+        specifier: ^2.1.1
+        version: 2.1.1
+      schemastery:
+        specifier: ^3.18.0
+        version: 3.18.0
+
+  ../../../vendor/plugins/@linxin666/dsh-remote-web-ui:
+    dependencies:
+      cloudflared:
+        specifier: ^0.7.3
+        version: 0.7.3
+      clsx:
+        specifier: ^2.1.1
+        version: 2.1.1
+      qrcode.react:
+        specifier: ^4.2.0
+        version: 4.2.0
+      schemastery:
+        specifier: ^3.18.0
+        version: 3.18.0
+      zod:
+        specifier: ^4.4.3
+        version: 4.4.3
+
+  ../../../vendor/plugins/@linxin666/dsh-skins:
+    dependencies:
+      '@linxin666/dsh-client-ui-skin-center':
+        specifier: 0.1.11
+        version: 0.1.11
+
+  ../../../vendor/plugins/@linxin666/dsh-ssh:
+    dependencies:
+      '@xterm/addon-fit':
+        specifier: ^0.11.0
+        version: 0.11.0
+      '@xterm/xterm':
+        specifier: ^6.0.0
+        version: 6.0.0
+      ssh2:
+        specifier: ^1.17.0
+        version: 1.17.0
+      ws:
+        specifier: ^8.18.0
+        version: 8.21.3
+
+  ../../../vendor/plugins/@linxin666/dsh-web-ui-all:
+    dependencies:
+      '@linxin666/dsh-client-ui-aionui-panel':
+        specifier: 0.1.11
+        version: 0.1.11
+      '@linxin666/dsh-client-ui-git-graph':
+        specifier: 0.1.11
+        version: 0.1.11
+      '@linxin666/dsh-client-ui-task-board':
+        specifier: 0.1.11
+        version: 0.1.11
+      '@linxin666/dsh-client-ui-web-ui-settings':
+        specifier: 0.1.11
+        version: 0.1.11
+      '@linxin666/dsh-live-stats':
+        specifier: 0.1.11
+        version: 0.1.11
+      '@linxin666/dsh-pet':
+        specifier: 0.1.11
+        version: 0.1.11
+      '@linxin666/dsh-remote-web-ui':
+        specifier: 0.1.11
+        version: 0.1.11
+      '@linxin666/dsh-skins':
+        specifier: 0.1.11
+        version: 0.1.11
+      '@linxin666/dsh-ssh':
+        specifier: 0.1.11
+        version: 0.1.11
+
+  ../../../vendor/plugins/dshmarket: {}
 
 packages:
 
@@ -316,7 +426,7 @@ snapshots:
       - react-dom
       - utf-8-validate
 
-  '@loserfox/distill@https://codeload.github.com/LoserFox/distill/tar.gz/d2aaa395adeffe88e429be796c12d829752cbad1': {}
+  '@loserfox/distill@https://codeload.github.com/LoserFox/distill/tar.gz/d2aaa395adeffe88e429be796c12d829752cbad1(patch_hash=438436963ef7851aadc3c3bdc556939223005877812241e9763608c2b6dbe587)': {}
 
   '@standard-schema/spec@1.1.0': {}
 

@@ -9,4 +9,10 @@ agent-default-model:
   model: deepseek-v4-flash
   reasoningEffort: max
 ui-theme:
-  preference: system
+  preference: light
+pet:
+  visible: true
+  size: 160
+  right: 95
+  bottom: 66
+  name: 鲸鱼娘

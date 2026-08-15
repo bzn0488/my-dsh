@@ -1,0 +1,22 @@
+diff --git a/lib/index.js b/lib/index.js
+index c702d0d..964140a 100644
+--- a/lib/index.js
++++ b/lib/index.js
+@@ -81,6 +81,17 @@ import z from '@deepseek-ai/schemastery';
+ import { isSkillName } from '@deepseek-ai/dsh-skill';
+ import { assertObjectJsonSchema } from '@deepseek-ai/dsh-tools';
+ import { deadline, MAX_TIMER_DELAY_MS } from '@deepseek-ai/dsh-timeout';
++import { KNOWN_SESSION_EVENT_TYPES } from '@deepseek-ai/dsh-session';
++// Register the review-request event type with the harness session vocabulary
++// so persisted logs containing it stay loadable: the persistence read path
++// (dsh-session-persistence assertEventsSupported) refuses any event type
++// outside KNOWN_SESSION_EVENT_TYPES unless the envelope is marked ignorable,
++// and session.append cannot set that marker. This module shares the same Set
++// instance with the persistence layer (both resolve @deepseek-ai/dsh-session
++// to the same file), and runs at plugin load — well before any session log is
++// read — so existing sessions that triggered a distill review become readable
++// again. Keep this list in sync if the plugin ever appends more event types.
++KNOWN_SESSION_EVENT_TYPES.add('session/distill-review-request');
+ export const name = 'distill';
+ export const inject = ['subagents'];
+ const DEFAULT_MIN_USER_MESSAGES = 3;

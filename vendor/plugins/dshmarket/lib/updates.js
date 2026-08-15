@@ -1,0 +1,61 @@
+/**
+ * Update detection: per-plugin comparison of what the profile has against
+ * the source of truth — git HEAD for github installs, the npm latest
+ * dist-tag for registry installs — with a TTL cache.
+ */
+import { readInstalled, readInstalledVersion, readLockCommits } from './profile.js';
+const UPDATES_TTL_MS = 30 * 60 * 1000;
+let updatesCache = null;
+/** Drop the cached listing (after a successful install/update/uninstall). */
+export function invalidateUpdates() {
+    updatesCache = null;
+}
+async function fetchJson(url) {
+    const res = await fetch(url, {
+        headers: { accept: 'application/json', 'user-agent': 'dsh-market' },
+        signal: AbortSignal.timeout(4000),
+    });
+    if (!res.ok)
+        throw new Error(`HTTP ${res.status}`);
+    return res.json();
+}
+/** Per-plugin update checks; a failed check reports no update rather than failing the listing. */
+export async function checkUpdates(profile, force = false) {
+    if (!force && updatesCache && Date.now() - updatesCache.at < UPDATES_TTL_MS)
+        return updatesCache.data;
+    const installed = readInstalled(profile);
+    const lockCommits = readLockCommits(profile);
+    const result = {};
+    await Promise.all(Object.entries(installed).map(async ([name, spec]) => {
+        const version = readInstalledVersion(profile, name);
+        if (spec.startsWith('link:') || spec.startsWith('file:')) {
+            result[name] = { kind: 'linked', version, current: null, latest: null, updateAvailable: false };
+            return;
+        }
+        const gh = /^(?:github:)?([A-Za-z0-9_.-]+\/[A-Za-z0-9_.-]+?)(?:#.*)?$/.exec(spec);
+        try {
+            if (spec.startsWith('github:') && gh !== null) {
+                const current = lockCommits.get(gh[1].toLowerCase()) ?? null;
+                const head = (await fetchJson(`https://api.github.com/repos/${gh[1]}/commits/HEAD`));
+                const latest = typeof head.sha === 'string' ? head.sha : null;
+                result[name] = {
+                    kind: 'github', version, current, latest,
+                    updateAvailable: current !== null && latest !== null && current !== latest,
+                };
+            }
+            else {
+                const meta = (await fetchJson(`https://registry.npmjs.org/${encodeURIComponent(name)}/latest`));
+                const latest = typeof meta.version === 'string' ? meta.version : null;
+                result[name] = {
+                    kind: 'npm', version, current: version, latest,
+                    updateAvailable: version !== null && latest !== null && version !== latest,
+                };
+            }
+        }
+        catch {
+            result[name] = { kind: spec.startsWith('github:') ? 'github' : 'npm', version, current: null, latest: null, updateAvailable: false };
+        }
+    }));
+    updatesCache = { at: Date.now(), data: result };
+    return result;
+}

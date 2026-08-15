@@ -12,8 +12,9 @@ node_modules/
 .pnpm-state/
 
 # --- DSH runtime state ---
-.dsh/sessions/
-.dsh/storages/
+# NOTE: .dsh/sessions/ and .dsh/storages/ are TRACKED on purpose — the
+# workstation's persisted conversation history and memory belong in git.
+# Only transient logs stay ignored.
 .dsh/restart.log
 *.log
 
@@ -24,6 +25,5 @@ node_modules/
 .env.*
 
 # --- Agent-generated content ---
-# Auto-distilled skills (distill) and third-party skill installs live here.
-# Ignored so the repo stays reviewable; see README "Skills" to opt in.
-.agents/skills/
+# NOTE: .agents/skills/ is TRACKED on purpose — distilled and hand-authored
+# skills are the workstation's accumulated knowledge and belong in git.

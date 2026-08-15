@@ -1,0 +1,33 @@
+{
+  "unit": {
+    "name": "workspace",
+    "version": 2
+  },
+  "global": {
+    "initialized": true,
+    "workspaceIds": [
+      "384fa96a-9155-4ef3-88ff-f765694351f0"
+    ],
+    "archivedSessionIds": [
+      "session-0792c992-baa3-4b94-b37a-71fa0259e61b"
+    ]
+  },
+  "tables": {
+    "workspaces": {
+      "384fa96a-9155-4ef3-88ff-f765694351f0": {
+        "path": "E:\\Deepseek Harness",
+        "title": "Deepseek Harness",
+        "sessionIds": [
+          "session-a47d5af2-0cbd-4805-930d-5e163c983a1c",
+          "session-eef329c3-e62e-4ad5-8450-265d9599273f",
+          "session-0792c992-baa3-4b94-b37a-71fa0259e61b",
+          "session-cf42c34a-e24f-49ae-98d0-d6444067d163",
+          "session-78681656-1a05-4000-9827-524fb1ae8893",
+          "session-34d4d909-619c-481c-847f-f7ea08522b1b"
+        ],
+        "createdAt": "2026-08-14T05:14:20.423Z",
+        "updatedAt": "2026-08-15T09:02:35.327Z"
+      }
+    }
+  }
+}

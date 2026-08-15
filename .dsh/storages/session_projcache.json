@@ -1,0 +1,1021 @@
+{
+  "unit": {
+    "name": "session_projcache",
+    "version": 3
+  },
+  "global": null,
+  "tables": {
+    "sessions": {
+      "session-34d4d909-619c-481c-847f-f7ea08522b1b": {
+        "identity": {
+          "createdAt": 1786684460529,
+          "cwd": "E:\\Deepseek Harness"
+        },
+        "rows": {
+          "sessionStats": {
+            "ver": 1,
+            "seq": 54560,
+            "val": {
+              "turns": 11,
+              "steps": 51,
+              "llmMs": 628846,
+              "toolMs": 102451,
+              "ttftMs": 167175,
+              "ttftSteps": 51,
+              "decodeMs": 461671,
+              "decodeTokens": 56103,
+              "lastTurn": 11,
+              "openStep": null,
+              "pendingCalls": {}
+            }
+          },
+          "title": {
+            "ver": 1,
+            "seq": 54560,
+            "val": "DeepSeek harness功能与扩展规范"
+          },
+          "goal": {
+            "ver": 4,
+            "seq": 54560,
+            "val": null
+          },
+          "tokenUsage": {
+            "ver": 1,
+            "seq": 54560,
+            "val": {
+              "totals": {
+                "uncachedInputTokens": 130539,
+                "outputTokens": 56103,
+                "cacheReadTokens": 4787968,
+                "cacheWriteTokens": 0
+              },
+              "last": {
+                "turn": 11,
+                "step": 2,
+                "buckets": {
+                  "uncachedInputTokens": 2707,
+                  "outputTokens": 2151,
+                  "cacheReadTokens": 166272,
+                  "cacheWriteTokens": 0
+                }
+              }
+            }
+          },
+          "contextPressure": {
+            "ver": 4,
+            "seq": 54560,
+            "val": {
+              "surfaceTokens": 114674,
+              "contextWindow": 1000000,
+              "pressureTokens": 168979,
+              "sampledSurfaceTokens": 113419
+            }
+          },
+          "contextBreakdown": {
+            "ver": 2,
+            "seq": 54560,
+            "val": {
+              "systemTokens": 4435,
+              "toolsTokens": 8541,
+              "messageTokens": 114674
+            }
+          },
+          "subagentTiming": {
+            "ver": 2,
+            "seq": 54560,
+            "val": {
+              "descriptorSeen": false,
+              "settledMs": 0
+            }
+          },
+          "subagent": {
+            "ver": 2,
+            "seq": 54560,
+            "val": {}
+          },
+          "permissions": {
+            "ver": 1,
+            "seq": 54560,
+            "val": {
+              "preset": "workspace-write",
+              "sandbox": "workspace-write",
+              "approval": "ask"
+            }
+          },
+          "sessionListMetadata": {
+            "ver": 1,
+            "seq": 54560,
+            "val": {
+              "blank": false,
+              "lastPromptAt": 1786765437466
+            }
+          },
+          "imageLimits": {
+            "ver": 1,
+            "seq": 54560,
+            "val": null
+          },
+          "todos": {
+            "ver": 2,
+            "seq": 54560,
+            "val": null
+          },
+          "plan": {
+            "ver": 1,
+            "seq": 54560,
+            "val": {
+              "active": false,
+              "wanted": null
+            }
+          }
+        }
+      },
+      "session-78681656-1a05-4000-9827-524fb1ae8893": {
+        "identity": {
+          "createdAt": 1786765671739,
+          "cwd": "E:\\Deepseek Harness"
+        },
+        "rows": {
+          "sessionStats": {
+            "ver": 1,
+            "seq": 50484,
+            "val": {
+              "turns": 7,
+              "steps": 62,
+              "llmMs": 614349,
+              "toolMs": 431057,
+              "ttftMs": 175543,
+              "ttftSteps": 60,
+              "decodeMs": 438806,
+              "decodeTokens": 48613,
+              "lastTurn": 7,
+              "openStep": null,
+              "pendingCalls": {}
+            }
+          },
+          "title": {
+            "ver": 1,
+            "seq": 50484,
+            "val": "DSh插件社区资源查找"
+          },
+          "goal": {
+            "ver": 4,
+            "seq": 50484,
+            "val": null
+          },
+          "tokenUsage": {
+            "ver": 1,
+            "seq": 50484,
+            "val": {
+              "totals": {
+                "uncachedInputTokens": 47472,
+                "outputTokens": 48613,
+                "cacheReadTokens": 3009024,
+                "cacheWriteTokens": 0
+              },
+              "last": {
+                "turn": 7,
+                "step": 3,
+                "buckets": {
+                  "uncachedInputTokens": 67,
+                  "outputTokens": 1973,
+                  "cacheReadTokens": 89088,
+                  "cacheWriteTokens": 0
+                }
+              }
+            }
+          },
+          "contextPressure": {
+            "ver": 4,
+            "seq": 50484,
+            "val": {
+              "surfaceTokens": 74548,
+              "contextWindow": 1000000,
+              "pressureTokens": 89155,
+              "sampledSurfaceTokens": 71679
+            }
+          },
+          "contextBreakdown": {
+            "ver": 2,
+            "seq": 50484,
+            "val": {
+              "systemTokens": 1544,
+              "toolsTokens": 6670,
+              "messageTokens": 74548
+            }
+          },
+          "subagentTiming": {
+            "ver": 2,
+            "seq": 50484,
+            "val": {
+              "descriptorSeen": false,
+              "settledMs": 0
+            }
+          },
+          "subagent": {
+            "ver": 2,
+            "seq": 50484,
+            "val": {}
+          },
+          "permissions": {
+            "ver": 1,
+            "seq": 50484,
+            "val": {
+              "preset": "workspace-write",
+              "sandbox": "workspace-write",
+              "approval": "ask"
+            }
+          },
+          "sessionListMetadata": {
+            "ver": 1,
+            "seq": 50484,
+            "val": {
+              "blank": false,
+              "lastPromptAt": 1786771418472
+            }
+          },
+          "imageLimits": {
+            "ver": 1,
+            "seq": 50484,
+            "val": null
+          },
+          "todos": {
+            "ver": 2,
+            "seq": 50484,
+            "val": null
+          },
+          "plan": {
+            "ver": 1,
+            "seq": 50484,
+            "val": {
+              "active": false,
+              "wanted": null
+            }
+          }
+        }
+      },
+      "session-cf42c34a-e24f-49ae-98d0-d6444067d163": {
+        "identity": {
+          "createdAt": 1786766638321,
+          "cwd": "E:\\Deepseek Harness"
+        },
+        "rows": {
+          "sessionStats": {
+            "ver": 1,
+            "seq": 143440,
+            "val": {
+              "turns": 14,
+              "steps": 108,
+              "llmMs": 1676752,
+              "toolMs": 447631,
+              "ttftMs": 346131,
+              "ttftSteps": 107,
+              "decodeMs": 1330621,
+              "decodeTokens": 142750,
+              "lastTurn": 14,
+              "openStep": null,
+              "pendingCalls": {}
+            }
+          },
+          "title": {
+            "ver": 1,
+            "seq": 143440,
+            "val": "插件市场中记忆插件介绍"
+          },
+          "goal": {
+            "ver": 4,
+            "seq": 143440,
+            "val": null
+          },
+          "tokenUsage": {
+            "ver": 1,
+            "seq": 143440,
+            "val": {
+              "totals": {
+                "uncachedInputTokens": 370228,
+                "outputTokens": 142750,
+                "cacheReadTokens": 15719168,
+                "cacheWriteTokens": 0
+              },
+              "last": {
+                "turn": 14,
+                "step": 1,
+                "buckets": {
+                  "uncachedInputTokens": 157,
+                  "outputTokens": 3493,
+                  "cacheReadTokens": 279168,
+                  "cacheWriteTokens": 0
+                }
+              }
+            }
+          },
+          "contextPressure": {
+            "ver": 4,
+            "seq": 143440,
+            "val": {
+              "surfaceTokens": 216165,
+              "contextWindow": 1000000,
+              "pressureTokens": 279325,
+              "sampledSurfaceTokens": 213915
+            }
+          },
+          "contextBreakdown": {
+            "ver": 2,
+            "seq": 143440,
+            "val": {
+              "systemTokens": 4435,
+              "toolsTokens": 8541,
+              "messageTokens": 216165
+            }
+          },
+          "subagentTiming": {
+            "ver": 2,
+            "seq": 143440,
+            "val": {
+              "descriptorSeen": false,
+              "settledMs": 0
+            }
+          },
+          "subagent": {
+            "ver": 2,
+            "seq": 143440,
+            "val": {}
+          },
+          "permissions": {
+            "ver": 1,
+            "seq": 143440,
+            "val": {
+              "preset": "workspace-write",
+              "sandbox": "workspace-write",
+              "approval": "ask"
+            }
+          },
+          "sessionListMetadata": {
+            "ver": 1,
+            "seq": 143440,
+            "val": {
+              "blank": false,
+              "lastPromptAt": 1786781108302
+            }
+          },
+          "imageLimits": {
+            "ver": 1,
+            "seq": 143440,
+            "val": null
+          },
+          "todos": {
+            "ver": 2,
+            "seq": 143440,
+            "val": null
+          },
+          "plan": {
+            "ver": 1,
+            "seq": 143440,
+            "val": {
+              "active": false,
+              "wanted": null
+            }
+          }
+        }
+      },
+      "session-0792c992-baa3-4b94-b37a-71fa0259e61b": {
+        "identity": {
+          "createdAt": 1786771798267,
+          "cwd": "E:\\Deepseek Harness"
+        },
+        "rows": {
+          "sessionStats": {
+            "ver": 1,
+            "seq": 77195,
+            "val": {
+              "turns": 7,
+              "steps": 64,
+              "llmMs": 798095,
+              "toolMs": 517539,
+              "ttftMs": 126835,
+              "ttftSteps": 61,
+              "decodeMs": 671260,
+              "decodeTokens": 78210,
+              "lastTurn": 7,
+              "openStep": null,
+              "pendingCalls": {}
+            }
+          },
+          "title": {
+            "ver": 1,
+            "seq": 77195,
+            "val": "这里有dsh的插件市场插件吗"
+          },
+          "goal": {
+            "ver": 4,
+            "seq": 77195,
+            "val": null
+          },
+          "tokenUsage": {
+            "ver": 1,
+            "seq": 77195,
+            "val": {
+              "totals": {
+                "uncachedInputTokens": 52057,
+                "outputTokens": 78210,
+                "cacheReadTokens": 3608320,
+                "cacheWriteTokens": 0
+              },
+              "last": {
+                "turn": 7,
+                "step": 5,
+                "buckets": {
+                  "uncachedInputTokens": 67,
+                  "outputTokens": 386,
+                  "cacheReadTokens": 123904,
+                  "cacheWriteTokens": 0
+                }
+              }
+            }
+          },
+          "contextPressure": {
+            "ver": 4,
+            "seq": 77195,
+            "val": {
+              "surfaceTokens": 102006,
+              "contextWindow": 1000000,
+              "pressureTokens": 123971,
+              "sampledSurfaceTokens": 101784
+            }
+          },
+          "contextBreakdown": {
+            "ver": 2,
+            "seq": 77195,
+            "val": {
+              "systemTokens": 1544,
+              "toolsTokens": 6670,
+              "messageTokens": 102006
+            }
+          },
+          "subagentTiming": {
+            "ver": 2,
+            "seq": 77195,
+            "val": {
+              "descriptorSeen": false,
+              "settledMs": 0
+            }
+          },
+          "subagent": {
+            "ver": 2,
+            "seq": 77195,
+            "val": {}
+          },
+          "permissions": {
+            "ver": 1,
+            "seq": 77195,
+            "val": {
+              "preset": "workspace-write",
+              "sandbox": "workspace-write",
+              "approval": "ask"
+            }
+          },
+          "sessionListMetadata": {
+            "ver": 1,
+            "seq": 77195,
+            "val": {
+              "blank": false,
+              "lastPromptAt": 1786773460441
+            }
+          },
+          "imageLimits": {
+            "ver": 1,
+            "seq": 77195,
+            "val": null
+          },
+          "todos": {
+            "ver": 2,
+            "seq": 77195,
+            "val": null
+          },
+          "plan": {
+            "ver": 1,
+            "seq": 77195,
+            "val": {
+              "active": false,
+              "wanted": null
+            }
+          }
+        }
+      },
+      "bd8bcaad-97ad-4352-be12-8dab7d528dab": {
+        "identity": {
+          "createdAt": 1786779155359,
+          "cwd": "E:\\Deepseek Harness"
+        },
+        "rows": {
+          "sessionStats": {
+            "ver": 1,
+            "seq": 2067,
+            "val": {
+              "turns": 1,
+              "steps": 1,
+              "llmMs": 20399,
+              "toolMs": 0,
+              "ttftMs": 1740,
+              "ttftSteps": 1,
+              "decodeMs": 18659,
+              "decodeTokens": 2048,
+              "lastTurn": 1,
+              "openStep": null,
+              "pendingCalls": {}
+            }
+          },
+          "title": {
+            "ver": 1,
+            "seq": 2067,
+            "val": "You are the background skill"
+          },
+          "goal": {
+            "ver": 4,
+            "seq": 2067,
+            "val": null
+          },
+          "tokenUsage": {
+            "ver": 1,
+            "seq": 2067,
+            "val": {
+              "totals": {
+                "uncachedInputTokens": 6350,
+                "outputTokens": 2048,
+                "cacheReadTokens": 0,
+                "cacheWriteTokens": 0
+              },
+              "last": {
+                "turn": 1,
+                "step": 1,
+                "buckets": {
+                  "uncachedInputTokens": 6350,
+                  "outputTokens": 2048,
+                  "cacheReadTokens": 0,
+                  "cacheWriteTokens": 0
+                }
+              }
+            }
+          },
+          "contextPressure": {
+            "ver": 4,
+            "seq": 2067,
+            "val": {
+              "surfaceTokens": 4944,
+              "contextWindow": 1000000,
+              "pressureTokens": 6350,
+              "sampledSurfaceTokens": 2525
+            }
+          },
+          "contextBreakdown": {
+            "ver": 2,
+            "seq": 2067,
+            "val": {
+              "systemTokens": 4311,
+              "toolsTokens": 245,
+              "messageTokens": 4944
+            }
+          },
+          "subagentTiming": {
+            "ver": 2,
+            "seq": 2067,
+            "val": {
+              "descriptorSeen": true,
+              "settledMs": 20480
+            }
+          },
+          "subagent": {
+            "ver": 2,
+            "seq": 2067,
+            "val": {
+              "identity": {
+                "mode": "one-shot",
+                "label": "distill-review",
+                "seq": 5
+              }
+            }
+          },
+          "permissions": {
+            "ver": 1,
+            "seq": 2067,
+            "val": {
+              "preset": null,
+              "sandbox": "workspace-write",
+              "approval": "never"
+            }
+          },
+          "sessionListMetadata": {
+            "ver": 1,
+            "seq": 2067,
+            "val": {
+              "blank": false,
+              "lastPromptAt": 1786779155445
+            }
+          },
+          "imageLimits": {
+            "ver": 1,
+            "seq": 2067,
+            "val": null
+          },
+          "todos": {
+            "ver": 2,
+            "seq": 2067,
+            "val": null
+          },
+          "plan": {
+            "ver": 1,
+            "seq": 2067,
+            "val": {
+              "active": false,
+              "wanted": null
+            }
+          }
+        }
+      },
+      "7879a431-1983-4746-80e3-69d50ccb891b": {
+        "identity": {
+          "createdAt": 1786780321913,
+          "cwd": "E:\\Deepseek Harness"
+        },
+        "rows": {
+          "sessionStats": {
+            "ver": 1,
+            "seq": 607,
+            "val": {
+              "turns": 1,
+              "steps": 1,
+              "llmMs": 6320,
+              "toolMs": 218,
+              "ttftMs": 1359,
+              "ttftSteps": 1,
+              "decodeMs": 4961,
+              "decodeTokens": 616,
+              "lastTurn": 1,
+              "openStep": null,
+              "pendingCalls": {}
+            }
+          },
+          "title": {
+            "ver": 1,
+            "seq": 607,
+            "val": "You are the background skill"
+          },
+          "goal": {
+            "ver": 4,
+            "seq": 607,
+            "val": null
+          },
+          "tokenUsage": {
+            "ver": 1,
+            "seq": 607,
+            "val": {
+              "totals": {
+                "uncachedInputTokens": 6084,
+                "outputTokens": 616,
+                "cacheReadTokens": 0,
+                "cacheWriteTokens": 0
+              },
+              "last": {
+                "turn": 1,
+                "step": 1,
+                "buckets": {
+                  "uncachedInputTokens": 6084,
+                  "outputTokens": 616,
+                  "cacheReadTokens": 0,
+                  "cacheWriteTokens": 0
+                }
+              }
+            }
+          },
+          "contextPressure": {
+            "ver": 4,
+            "seq": 607,
+            "val": {
+              "surfaceTokens": 2992,
+              "contextWindow": 1000000,
+              "pressureTokens": 6084,
+              "sampledSurfaceTokens": 2315
+            }
+          },
+          "contextBreakdown": {
+            "ver": 2,
+            "seq": 607,
+            "val": {
+              "systemTokens": 4311,
+              "toolsTokens": 245,
+              "messageTokens": 2992
+            }
+          },
+          "subagentTiming": {
+            "ver": 2,
+            "seq": 607,
+            "val": {
+              "descriptorSeen": true,
+              "settledMs": 6614
+            }
+          },
+          "subagent": {
+            "ver": 2,
+            "seq": 607,
+            "val": {
+              "identity": {
+                "mode": "one-shot",
+                "label": "distill-review",
+                "seq": 5
+              }
+            }
+          },
+          "permissions": {
+            "ver": 1,
+            "seq": 607,
+            "val": {
+              "preset": null,
+              "sandbox": "workspace-write",
+              "approval": "never"
+            }
+          },
+          "sessionListMetadata": {
+            "ver": 1,
+            "seq": 607,
+            "val": {
+              "blank": false,
+              "lastPromptAt": 1786780321992
+            }
+          },
+          "imageLimits": {
+            "ver": 1,
+            "seq": 607,
+            "val": null
+          },
+          "todos": {
+            "ver": 2,
+            "seq": 607,
+            "val": null
+          },
+          "plan": {
+            "ver": 1,
+            "seq": 607,
+            "val": {
+              "active": false,
+              "wanted": null
+            }
+          }
+        }
+      },
+      "session-eef329c3-e62e-4ad5-8450-265d9599273f": {
+        "identity": {
+          "createdAt": 1786781391878,
+          "cwd": "E:\\Deepseek Harness"
+        },
+        "rows": {
+          "sessionStats": {
+            "ver": 1,
+            "seq": 36896,
+            "val": {
+              "turns": 6,
+              "steps": 66,
+              "llmMs": 482068,
+              "toolMs": 1989194,
+              "ttftMs": 157870,
+              "ttftSteps": 65,
+              "decodeMs": 324198,
+              "decodeTokens": 39213,
+              "lastTurn": 6,
+              "openStep": null,
+              "pendingCalls": {}
+            }
+          },
+          "title": {
+            "ver": 1,
+            "seq": 36896,
+            "val": "将DeepSeek harness代码纳入Git仓库进行版本管理"
+          },
+          "goal": {
+            "ver": 4,
+            "seq": 36896,
+            "val": null
+          },
+          "tokenUsage": {
+            "ver": 1,
+            "seq": 36896,
+            "val": {
+              "totals": {
+                "uncachedInputTokens": 65215,
+                "outputTokens": 39213,
+                "cacheReadTokens": 3509888,
+                "cacheWriteTokens": 0
+              },
+              "last": {
+                "turn": 6,
+                "step": 1,
+                "buckets": {
+                  "uncachedInputTokens": 106,
+                  "outputTokens": 833,
+                  "cacheReadTokens": 98560,
+                  "cacheWriteTokens": 0
+                }
+              }
+            }
+          },
+          "contextPressure": {
+            "ver": 4,
+            "seq": 36896,
+            "val": {
+              "surfaceTokens": 60461,
+              "contextWindow": 1000000,
+              "pressureTokens": 98666,
+              "sampledSurfaceTokens": 60044
+            }
+          },
+          "contextBreakdown": {
+            "ver": 2,
+            "seq": 36896,
+            "val": {
+              "systemTokens": 1544,
+              "toolsTokens": 6670,
+              "messageTokens": 60461
+            }
+          },
+          "subagentTiming": {
+            "ver": 2,
+            "seq": 36896,
+            "val": {
+              "descriptorSeen": false,
+              "settledMs": 0
+            }
+          },
+          "subagent": {
+            "ver": 2,
+            "seq": 36896,
+            "val": {}
+          },
+          "permissions": {
+            "ver": 1,
+            "seq": 36896,
+            "val": {
+              "preset": "workspace-write",
+              "sandbox": "workspace-write",
+              "approval": "ask"
+            }
+          },
+          "sessionListMetadata": {
+            "ver": 1,
+            "seq": 36896,
+            "val": {
+              "blank": false,
+              "lastPromptAt": 1786784410691
+            }
+          },
+          "imageLimits": {
+            "ver": 1,
+            "seq": 36896,
+            "val": null
+          },
+          "todos": {
+            "ver": 2,
+            "seq": 36896,
+            "val": null
+          },
+          "plan": {
+            "ver": 1,
+            "seq": 36896,
+            "val": {
+              "active": false,
+              "wanted": null
+            }
+          }
+        }
+      },
+      "e09aaa4f-9b9e-462e-97ea-bd43f73ee3ac": {
+        "identity": {
+          "createdAt": 1786784422305,
+          "cwd": "E:\\Deepseek Harness"
+        },
+        "rows": {
+          "sessionStats": {
+            "ver": 1,
+            "seq": 55,
+            "val": {
+              "turns": 1,
+              "steps": 1,
+              "llmMs": 3016,
+              "toolMs": 12,
+              "ttftMs": 2495,
+              "ttftSteps": 1,
+              "decodeMs": 521,
+              "decodeTokens": 64,
+              "lastTurn": 1,
+              "openStep": null,
+              "pendingCalls": {}
+            }
+          },
+          "title": {
+            "ver": 1,
+            "seq": 55,
+            "val": "You are the background skill"
+          },
+          "goal": {
+            "ver": 4,
+            "seq": 55,
+            "val": null
+          },
+          "tokenUsage": {
+            "ver": 1,
+            "seq": 55,
+            "val": {
+              "totals": {
+                "uncachedInputTokens": 3783,
+                "outputTokens": 64,
+                "cacheReadTokens": 0,
+                "cacheWriteTokens": 0
+              },
+              "last": {
+                "turn": 1,
+                "step": 1,
+                "buckets": {
+                  "uncachedInputTokens": 3783,
+                  "outputTokens": 64,
+                  "cacheReadTokens": 0,
+                  "cacheWriteTokens": 0
+                }
+              }
+            }
+          },
+          "contextPressure": {
+            "ver": 4,
+            "seq": 55,
+            "val": {
+              "surfaceTokens": 2368,
+              "contextWindow": 1000000,
+              "pressureTokens": 3783,
+              "sampledSurfaceTokens": 2298
+            }
+          },
+          "contextBreakdown": {
+            "ver": 2,
+            "seq": 55,
+            "val": {
+              "systemTokens": 1420,
+              "toolsTokens": 245,
+              "messageTokens": 2368
+            }
+          },
+          "subagentTiming": {
+            "ver": 2,
+            "seq": 55,
+            "val": {
+              "descriptorSeen": true,
+              "settledMs": 3313
+            }
+          },
+          "subagent": {
+            "ver": 2,
+            "seq": 55,
+            "val": {
+              "identity": {
+                "mode": "one-shot",
+                "label": "distill-review",
+                "seq": 5
+              }
+            }
+          },
+          "permissions": {
+            "ver": 1,
+            "seq": 55,
+            "val": {
+              "preset": null,
+              "sandbox": "workspace-write",
+              "approval": "never"
+            }
+          },
+          "sessionListMetadata": {
+            "ver": 1,
+            "seq": 55,
+            "val": {
+              "blank": false,
+              "lastPromptAt": 1786784422593
+            }
+          },
+          "imageLimits": {
+            "ver": 1,
+            "seq": 55,
+            "val": null
+          },
+          "todos": {
+            "ver": 2,
+            "seq": 55,
+            "val": null
+          },
+          "plan": {
+            "ver": 1,
+            "seq": 55,
+            "val": {
+              "active": false,
+              "wanted": null
+            }
+          }
+        }
+      }
+    }
+  }
+}
