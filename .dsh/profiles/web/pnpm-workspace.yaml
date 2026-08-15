@@ -1,0 +1,20 @@
+packages:
+  - .
+
+nodeLinker: hoisted
+autoInstallPeers: false
+minimumReleaseAgeExclude:
+  - dshmarket@1.2.4
+
+# Pin the pnpm store so every process context resolves the same location.
+# Without this, pnpm 11's default store path depends on whether the drive
+# root (E:\) is writable from the calling process (elevation/sandbox), which
+# made the marketplace installer resolve E:\.pnpm-store while this profile's
+# node_modules was linked from E:\Deepseek Harness\.pnpm-store — causing
+# ERR_PNPM_UNEXPECTED_STORE on install. Note: pnpm 11 ignores store-dir in a
+# project .npmrc; it must be set here in pnpm-workspace.yaml (storeDir).
+storeDir: E:/Deepseek Harness/.pnpm-store
+
+# Keep pnpm's generated cache/state inside the workstation path as well.
+cacheDir: E:/Deepseek Harness/.pnpm-cache
+stateDir: E:/Deepseek Harness/.pnpm-state
