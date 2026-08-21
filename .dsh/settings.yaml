@@ -4,15 +4,24 @@ llm-pi-ai:
   providers:
     opencode-go:
       apiKeyEnv: OPENCODE_GO_API_KEY
+    asteroid:
+      displayName: Asteroid
+      apiKeyEnv: ASTEROID_API_KEY
+      api: openai-completions
+      baseURL: https://ai.asteroidgamestudio.com/v1/
+      models:
+        - id: gpt-5.6-sol
+          name: gpt-5.6-sol
+        - id: gpt-5.6-terra
+          name: gpt-5.6-terra
 agent-default-model:
-  provider: opencode-go
-  model: deepseek-v4-flash
-  reasoningEffort: max
+  provider: asteroid
+  model: gpt-5.6-terra
 ui-theme:
   preference: light
 pet:
   visible: true
   size: 160
-  right: 95
-  bottom: 66
+  right: 30
+  bottom: 51
   name: 鲸鱼娘

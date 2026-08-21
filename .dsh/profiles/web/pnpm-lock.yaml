@@ -17,6 +17,9 @@ importers:
       '@loserfox/distill':
         specifier: github:LoserFox/distill
         version: https://codeload.github.com/LoserFox/distill/tar.gz/d2aaa395adeffe88e429be796c12d829752cbad1(patch_hash=438436963ef7851aadc3c3bdc556939223005877812241e9763608c2b6dbe587)
+      '@workstation/dsh-client-ui-skill-library':
+        specifier: link:E:\Deepseek Harness\plugins\dsh-skill-library
+        version: link:../../../plugins/dsh-skill-library
       dshmarket:
         specifier: ^1.2.4
         version: 1.2.4

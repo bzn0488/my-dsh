@@ -1,0 +1,4 @@
+# Local read-only Skill Library plugin for this workstation profile.
+- insert:
+    - id: ui-skill-library
+      name: '@workstation/dsh-client-ui-skill-library'

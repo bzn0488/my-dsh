@@ -1,0 +1,27 @@
+{
+  "name": "@workstation/dsh-client-ui-skill-library",
+  "version": "0.0.1",
+  "private": true,
+  "type": "module",
+  "description": "Read-only Skill Library sidebar for the local DeepSeek Harness workstation.",
+  "main": "lib/index.js",
+  "exports": {
+    ".": {
+      "default": "./lib/index.js"
+    },
+    "./client": {
+      "default": "./lib/client.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "dsh": {
+    "bundle": { "patch": "./cordis.patch.yml" },
+    "client": {
+      "inject": ["@deepseek-ai/dsh-client-runtime"],
+      "platform": "web"
+    }
+  },
+  "scripts": {
+    "build": "node ./scripts/build.mjs"
+  }
+}

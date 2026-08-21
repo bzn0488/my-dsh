@@ -6,10 +6,18 @@
   "global": {
     "initialized": true,
     "workspaceIds": [
+      "6b5da5fa-ed42-4cc0-bdcb-01e306366936",
       "384fa96a-9155-4ef3-88ff-f765694351f0"
     ],
     "archivedSessionIds": [
-      "session-0792c992-baa3-4b94-b37a-71fa0259e61b"
+      "session-0792c992-baa3-4b94-b37a-71fa0259e61b",
+      "session-a47d5af2-0cbd-4805-930d-5e163c983a1c",
+      "session-eef329c3-e62e-4ad5-8450-265d9599273f",
+      "session-cf42c34a-e24f-49ae-98d0-d6444067d163",
+      "session-78681656-1a05-4000-9827-524fb1ae8893",
+      "session-34d4d909-619c-481c-847f-f7ea08522b1b",
+      "session-88036abe-eafa-4a86-ba97-272b919dd6e1",
+      "session-9536682b-03fd-4e64-8937-92c8c2ea75c8"
     ]
   },
   "tables": {
@@ -28,6 +36,19 @@
         ],
         "createdAt": "2026-08-14T05:14:20.423Z",
         "updatedAt": "2026-08-17T05:50:20.367Z"
+      },
+      "6b5da5fa-ed42-4cc0-bdcb-01e306366936": {
+        "path": "C:\\Users\\Oabuser\\Desktop\\增量自走棋",
+        "title": "增量自走棋",
+        "sessionIds": [
+          "session-b638c26a-4489-40fc-80bf-8163bd2827b7",
+          "session-9536682b-03fd-4e64-8937-92c8c2ea75c8",
+          "session-604b6a4c-86d6-4a7d-9dc1-2f44aa7c28aa",
+          "session-88036abe-eafa-4a86-ba97-272b919dd6e1",
+          "session-b43ae968-01c1-4319-bd6e-f1091e6536c8"
+        ],
+        "createdAt": "2026-08-18T05:43:45.117Z",
+        "updatedAt": "2026-08-19T08:24:33.960Z"
       }
     }
   }

@@ -1,65 +1,77 @@
 @echo off
-rem DeepSeek Harness - 一键启�?Web UI
-setlocal enabledelayedexpansion
-set "DSH_HOME=E:\Deepseek Harness\.dsh"
-set "DSH_AGENTS_HOME=E:\Deepseek Harness\.agents"
+setlocal EnableExtensions EnableDelayedExpansion
+
+set "PROJECT_DIR=%~dp0"
+set "DSH_HOME=%PROJECT_DIR%.dsh"
+set "DSH_AGENTS_HOME=%PROJECT_DIR%.agents"
 set "DSH_PORT=3080"
 set "DSH_URL=http://127.0.0.1:%DSH_PORT%"
+set "DSH_CMD=%PROJECT_DIR%node_modules\.bin\dsh.cmd"
+set "DSH_LOG=%PROJECT_DIR%dsh-web.log"
 
-cd /d "E:\Deepseek Harness"
+cd /d "%PROJECT_DIR%"
 
 echo ============================================
 echo   DeepSeek Harness Web UI Launcher
 echo ============================================
 
-rem ---- 1. Check if a dsh web instance is already running on DSH_PORT ----
-set "PID="
-for /f "tokens=5" %%p in ('netstat -ano ^| findstr /r /c:":%DSH_PORT% .*LISTENING"') do (
-    if not defined PID set "PID=%%p"
+if not exist "%DSH_CMD%" (
+    echo [ERROR] DSH executable not found: "%DSH_CMD%"
+    echo [Hint] Run setup.cmd first.
+    pause
+    exit /b 1
 )
 
-if defined PID (
-    echo [Check] Web UI already running (PID: !PID!, port %DSH_PORT%)
-    echo [Action] Stopping the old instance to restart...
-    taskkill /PID !PID! /T /F >nul 2>&1
-    if errorlevel 1 (
-        echo [ERROR] Failed to stop PID !PID!. Please close it manually and retry.
-        pause
-        exit /b 1
-    )
-    echo [Action] Old instance stopped. Waiting for port to be released...
-    :wait_release
-    set "REMAIN="
-    for /f "tokens=5" %%p in ('netstat -ano ^| findstr /r /c:":%DSH_PORT% .*LISTENING"') do set "REMAIN=1"
-    if defined REMAIN (
-        timeout /t 1 /nobreak >nul
-        goto wait_release
-    )
-)
+call :find_listener
+if defined LISTENER_PID call :stop_listener
+if errorlevel 1 exit /b 1
 
-rem ---- 2. Start the dsh web service in the background ----
 echo [Start] Launching Web UI service...
-start "DeepSeek Harness Web UI" /min cmd /c ""E:\Deepseek Harness\node_modules\.bin\dsh.cmd" web"
+echo [Start] Log file: "%DSH_LOG%"
+start "DeepSeek Harness Web UI" /min cmd /d /c ""%DSH_CMD%" web 1>"%DSH_LOG%" 2>&1"
 
-rem ---- 3. Wait until the service is ready (poll the port, up to 60s) ----
-echo [Wait] Waiting for the service to be ready...
-set /a attempts=0
-:wait_ready
-set /a attempts+=1
-set "READY="
-for /f "tokens=5" %%p in ('netstat -ano ^| findstr /r /c:":%DSH_PORT% .*LISTENING"') do set "READY=1"
-if not defined READY (
-    if !attempts! geq 60 (
-        echo [ERROR] Service not ready within 60 seconds. Check the console output.
-        pause
-        exit /b 1
-    )
-    timeout /t 1 /nobreak >nul
-    goto wait_ready
+call :wait_until_ready
+if errorlevel 1 (
+    echo [ERROR] Service did not listen on port %DSH_PORT% within 60 seconds.
+    echo [ERROR] Review the log file: "%DSH_LOG%"
+    if exist "%DSH_LOG%" type "%DSH_LOG%"
+    pause
+    exit /b 1
 )
 
-rem ---- 4. Open the browser once the service is ready ----
-echo [Done] Service ready. Opening browser: %DSH_URL%
+echo [Done] Service ready: %DSH_URL%
 start "" "%DSH_URL%"
+exit /b 0
 
-endlocal
+:find_listener
+set "LISTENER_PID="
+for /f "tokens=5" %%P in ('netstat -ano ^| findstr /r /c:":%DSH_PORT% .*LISTENING"') do if not defined LISTENER_PID set "LISTENER_PID=%%P"
+exit /b 0
+
+:stop_listener
+echo [Check] Web UI is already running on port %DSH_PORT%, PID !LISTENER_PID!.
+echo [Action] Stopping the old instance...
+taskkill /PID !LISTENER_PID! /T /F >nul 2>&1
+if errorlevel 1 (
+    echo [ERROR] Failed to stop PID !LISTENER_PID!.
+    pause
+    exit /b 1
+)
+
+for /l %%A in (1,1,30) do (
+    call :find_listener
+    if not defined LISTENER_PID exit /b 0
+    >nul ping 127.0.0.1 -n 2
+)
+
+echo [ERROR] Port %DSH_PORT% was not released within 30 seconds.
+pause
+exit /b 1
+
+:wait_until_ready
+for /l %%A in (1,1,60) do (
+    call :find_listener
+    if defined LISTENER_PID exit /b 0
+    >nul ping 127.0.0.1 -n 2
+)
+exit /b 1
