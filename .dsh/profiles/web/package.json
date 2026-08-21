@@ -5,6 +5,7 @@
     "@linxin666/dsh-web-ui-all": "^0.1.11",
     "@loserfox/distill": "github:LoserFox/distill",
     "@workstation/dsh-client-ui-skill-library": "link:E:\\Deepseek Harness\\plugins\\dsh-skill-library",
+    "@workstation/dsh-knowledge-base": "link:E:\\Deepseek Harness\\plugins\\dsh-knowledge-base",
     "dshmarket": "^1.2.4"
   },
   "dsh": {
@@ -15,7 +16,8 @@
         "dshmarket",
         "@loserfox/distill",
         "@linxin666/dsh-web-ui-all",
-        "@workstation/dsh-client-ui-skill-library"
+        "@workstation/dsh-client-ui-skill-library",
+        "@workstation/dsh-knowledge-base"
       ]
     }
   }

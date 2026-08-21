@@ -1,0 +1,5 @@
+# Local Knowledge Base bundle for this workstation profile.
+# Keep the loader-entry ID distinct from the host plugin's exported name.
+- insert:
+    - id: ui-knowledge-base
+      name: '@workstation/dsh-knowledge-base'

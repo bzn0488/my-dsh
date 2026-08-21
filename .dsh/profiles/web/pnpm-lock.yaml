@@ -20,6 +20,9 @@ importers:
       '@workstation/dsh-client-ui-skill-library':
         specifier: link:E:\Deepseek Harness\plugins\dsh-skill-library
         version: link:../../../plugins/dsh-skill-library
+      '@workstation/dsh-knowledge-base':
+        specifier: link:E:\Deepseek Harness\plugins\dsh-knowledge-base
+        version: link:../../../plugins/dsh-knowledge-base
       dshmarket:
         specifier: ^1.2.4
         version: 1.2.4

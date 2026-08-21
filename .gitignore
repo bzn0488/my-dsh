@@ -24,6 +24,10 @@ node_modules/
 .env
 .env.*
 
+# --- Knowledge-base derived data ---
+# The Vault itself (knowledge/) is tracked. These are rebuilt from it.
+.dsh/storages/knowledge-base/
+
 # --- Agent-generated content ---
 # NOTE: .agents/skills/ is TRACKED on purpose — distilled and hand-authored
 # skills are the workstation's accumulated knowledge and belong in git.

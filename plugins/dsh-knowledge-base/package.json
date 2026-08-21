@@ -1,0 +1,12 @@
+{
+  "name": "@workstation/dsh-knowledge-base",
+  "version": "0.0.1",
+  "private": true,
+  "type": "module",
+  "description": "Local knowledge-base import, search, and retrieval for the workstation.",
+  "main": "lib/index.js",
+  "exports": { ".": { "default": "./lib/index.js" }, "./client": { "default": "./lib/client.js" }, "./package.json": "./package.json" },
+  "dsh": { "bundle": { "patch": "./cordis.patch.yml" }, "client": { "inject": ["@deepseek-ai/dsh-client-runtime"], "platform": "web" } },
+  "scripts": { "build": "node ./scripts/build.mjs" },
+  "dependencies": { "yaml": "^2.8.2", "@deepseek-ai/dsh-tools": "*" }
+}

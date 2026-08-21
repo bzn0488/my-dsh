@@ -22,6 +22,6 @@ ui-theme:
 pet:
   visible: true
   size: 160
-  right: 30
-  bottom: 51
+  right: 39
+  bottom: 58
   name: 鲸鱼娘

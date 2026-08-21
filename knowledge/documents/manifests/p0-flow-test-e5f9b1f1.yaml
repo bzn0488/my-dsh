@@ -1,0 +1,17 @@
+documentId: p0-flow-test-e5f9b1f1
+title: p0-flow-test
+fileName: p0-flow-test.md
+rawPath: p0-flow-test.md
+path: foundations/p0-flow-test-e5f9b1f1.md
+space: foundations
+project: null
+status: imported
+authority: imported-source
+sourceDescription: P0 flow verification
+importedAt: 2026-08-21T07:24:12.699Z
+updatedAt: 2026-08-21T07:24:12.699Z
+format: md
+sha256: 54a07a7076d9141e698a7db03a37d5b20f2c870eb5a0948171e14a37d8418df5
+bytes: 108
+preview: "# P0 Raw Flow Test 正反馈是一种使系统状态变化进一步增强后续同方向变化的机制。"
+schemaVersion: 1

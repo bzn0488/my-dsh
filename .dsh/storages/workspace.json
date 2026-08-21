@@ -26,6 +26,7 @@
         "path": "E:\\Deepseek Harness",
         "title": "Deepseek Harness",
         "sessionIds": [
+          "session-9456f203-8e31-49a0-816a-285eb7c1d3e8",
           "session-80881dcf-3582-47e9-843e-c96d67669a21",
           "session-a47d5af2-0cbd-4805-930d-5e163c983a1c",
           "session-eef329c3-e62e-4ad5-8450-265d9599273f",
@@ -35,7 +36,7 @@
           "session-34d4d909-619c-481c-847f-f7ea08522b1b"
         ],
         "createdAt": "2026-08-14T05:14:20.423Z",
-        "updatedAt": "2026-08-17T05:50:20.367Z"
+        "updatedAt": "2026-08-21T04:07:54.982Z"
       },
       "6b5da5fa-ed42-4cc0-bdcb-01e306366936": {
         "path": "C:\\Users\\Oabuser\\Desktop\\增量自走棋",
